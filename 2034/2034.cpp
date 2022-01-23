@@ -70,3 +70,11 @@ int main(){
     obj->update(4,2);
     cout<<obj->minimum()<<endl;
 }
+
+/*
+map, set, multimap, and multiset
+上述四种容器采用红黑树实现，红黑树是平衡二叉树的一种。不同操作的时间复杂度近似为:
+插入:O(logN)
+查看:O(logN)
+删除:O(logN)
+*/
