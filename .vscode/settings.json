@@ -4,6 +4,10 @@
         "utility": "cpp",
         "algorithm": "cpp",
         "xstring": "cpp",
-        "iostream": "cpp"
+        "iostream": "cpp",
+        "unordered_map": "cpp",
+        "xtree": "cpp",
+        "ostream": "cpp",
+        "set": "cpp"
     }
 }
