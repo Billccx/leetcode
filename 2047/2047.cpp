@@ -86,3 +86,36 @@ int main(){
     int result=s.countValidWords(sentence);
     cout<<result<<endl;
 }
+
+/*
+
+更好的字符串分割写法
+int countValidWords(string sentence) {
+        int n = sentence.length();
+        int l = 0, r = 0;
+        int ret = 0;
+        string_view slice(sentence);
+        while (true) {
+            while (l < n && sentence[l] == ' ') {
+                l++;
+            }
+            if (l >= n) {
+                break;
+            }
+            r = l + 1;
+            while (r < n && sentence[r] != ' ') {
+                r++;
+            }
+            if (isValid(slice.substr(l, r - l))) { // 判断根据空格分解出来的 token 是否有效
+                ret++;
+            }
+            l = r + 1;
+        }
+        return ret;
+    }
+
+作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/number-of-valid-words-in-a-sentence/solution/ju-zi-zhong-de-you-xiao-dan-ci-shu-by-le-hvow/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+*/
