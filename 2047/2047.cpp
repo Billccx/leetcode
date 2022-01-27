@@ -15,15 +15,14 @@ public:
         while(i<len){
             if(isValid==0 && sentence[i]!=' '){
                 i++;
-                continue;
             }
-            if(sentence[i]==' '){
+            else if(sentence[i]==' '){
                 hasNum=0;
                 has_=0;
                 hasPunctuation=0;
                 if(isValid) cnt++;
                 isValid=1;
-                while(i+1<len && sentence[i+1]==' ') i++;
+                while(i+1<len && sentence[i]==' ') i++;
             }
             else if(sentence[i]>='0' &&sentence[i]<='9'){
                 hasNum=1;
