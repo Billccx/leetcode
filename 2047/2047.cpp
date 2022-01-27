@@ -6,51 +6,75 @@ using namespace std;
 
 class Solution {
 public:
-    int countValidWords(string sentence) {
-        int cnt=0;
-        int hasNum=0,has_=0,hasPunctuation=0;
-        int isValid=1;
-        int len=sentence.length();
-        int i=0;
-        while(i<len){
-            if(isValid==0 && sentence[i]!=' '){
-                i++;
-                continue;
+    int isNumber(char c){
+        if(c>='0' && c<='9') return 1;
+        else return 0;
+    }
+
+    int isChar(char c){
+        if(c>='a'&& c<='z') return 1;
+        else return 0;
+    }
+
+    int isPunc(char c){
+        if(c=='!'||c==','||c=='.') return 1;
+        else return 0;
+    }
+
+    vector<string> split(string s){
+        int len=s.length(),start=0,end=0;
+        //cout<<"len:"<<len<<endl;
+        vector<string> v;
+        while(end<=len){
+            if(end==len){
+                //cout<<start<<','<<end<<endl;
+                if(end!=start) v.push_back(s.substr(start,end-start));
+                break;
             }
-            if(sentence[i]==' '){
-                hasNum=0;
-                has_=0;
-                hasPunctuation=0;
-                if(isValid) cnt++;
-                isValid=1;
-                while(i+1<len && sentence[i+1]==' ') i++;
-            }
-            else if(sentence[i]>='0' &&sentence[i]<='9'){
-                hasNum=1;
-                isValid=0;
-                i++;
-            }
-            else if(sentence[i]=='-'){
-                if(has_==0 && i-1>0 && i+1<len && sentence[i-1]>='a' &&sentence[i-1]<='z' && sentence[i+1]>='a' &&sentence[i+1]<='z'){
-                    has_=1;
-                }
-                else{
-                    isValid=0;
-                }
-                i++;
-            }
-            else if(sentence[i]=='!' && sentence[i]==',' && sentence[i]=='.'){
-                if(hasPunctuation=0 && ((i+1>=len && sentence[i-1]>='a' &&sentence[i-1]<='z')||(i+1<len && sentence[i+1]==' ' && sentence[i-1]>='a' &&sentence[i-1]<='z'))){
-                    hasPunctuation+=1;
-                }
-                else{
-                    isValid=0;
-                }
-                i++;
+            if(s[end]==' '){
+                //cout<<start<<','<<end<<endl;
+                if(end!=start) v.push_back(s.substr(start,end-start));
+                while(end<len && s[end]==' ') end++;
+                start=end;
             }
             else{
-                i++;
+                end++;
             }
+        }
+        return v;
+    }
+
+
+    int countValidWords(string sentence) {
+        vector<string> v=split(sentence);
+        // for(auto item: v){
+        //     cout<<item<<endl;
+        // }
+        int cnt=0;
+        for(auto item : v){
+            int isValid=1,has_=0;
+            for(int i=0;i<item.length();i++){
+                if(isNumber(item[i])){
+                    isValid=0;
+                    break;
+                }
+                if(isPunc(item[i])&& i!=item.length()-1){
+                    isValid=0;
+                    break;
+                }
+                if(item[i]=='-' ){
+                    //cout<<item.length()<<"    "<<i<<item[i-1]<<item[i+1]<<endl;
+                    if(has_==0 && i-1>=0 && i+1<item.length() && isChar(item[i-1]) && isChar(item[i+1])){
+                        has_=1;
+                    }
+                    else{
+                        isValid=0;
+                        break;
+                    }
+                }
+            }
+            if(isValid) cnt++;
+            //cout<<item<<':'<<isValid<<endl;
         }
         return cnt;
     }
@@ -58,7 +82,7 @@ public:
 
 int main(){
     Solution s;
-    string sentence = "alice and  bob are playing stone-game10";
+    string sentence = " o6 t";
     int result=s.countValidWords(sentence);
     cout<<result<<endl;
 }
