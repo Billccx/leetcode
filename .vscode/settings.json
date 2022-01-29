@@ -8,6 +8,8 @@
         "unordered_map": "cpp",
         "xtree": "cpp",
         "ostream": "cpp",
-        "set": "cpp"
+        "set": "cpp",
+        "xlocale": "cpp",
+        "queue": "cpp"
     }
 }
