@@ -44,3 +44,40 @@ int main(){
         cout<<result[i]<<endl;
     }
 }
+
+
+/*
+
+class Solution {
+public:
+    vector<string> uncommonFromSentences(string s1, string s2) {
+        unordered_map<string, int> freq;
+        
+        auto insert = [&](const string& s) {
+            stringstream ss(s);
+            string word;
+            while (ss >> word) {
+                ++freq[move(word)];
+            }
+        };
+
+        insert(s1);
+        insert(s2);
+
+        //遍历map
+        vector<string> ans;
+        for (const auto& [word, occ]: freq) {
+            if (occ == 1) {
+                ans.push_back(word);
+            }
+        }
+        return ans;
+    }
+};
+
+作者：LeetCode-Solution
+链接：https://leetcode-cn.com/problems/uncommon-words-from-two-sentences/solution/liang-ju-hua-zhong-de-bu-chang-jian-dan-a8bmz/
+来源：力扣（LeetCode）
+著作权归作者所有。商业转载请联系作者获得授权，非商业转载请注明出处。
+
+*/
