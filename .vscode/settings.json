@@ -10,6 +10,12 @@
         "ostream": "cpp",
         "set": "cpp",
         "xlocale": "cpp",
-        "queue": "cpp"
+        "queue": "cpp",
+        "deque": "cpp",
+        "initializer_list": "cpp",
+        "list": "cpp",
+        "map": "cpp",
+        "xhash": "cpp",
+        "xutility": "cpp"
     }
 }
