@@ -17,6 +17,5 @@
         "map": "cpp",
         "xhash": "cpp",
         "xutility": "cpp"
-    },
-    "window.zoomLevel": 3
+    }
 }
