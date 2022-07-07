@@ -17,6 +17,7 @@
         "map": "cpp",
         "xhash": "cpp",
         "xutility": "cpp",
-        "functional": "cpp"
+        "functional": "cpp",
+        "string": "cpp"
     }
 }
