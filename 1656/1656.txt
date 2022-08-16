@@ -1,0 +1,19 @@
+class vec{
+public:
+    vector<string> s;
+    vec(int n):s(n){
+
+    }
+};
+
+如何在类的构造函数中初始化vector？
+可以使用以上的方法
+也可以使用vector.resize()方法
+
+class vec{
+public:
+    vector<string> s;
+    vec(int n){
+        s.resize(10);
+    }
+};
