@@ -13,7 +13,7 @@ public:
         int len=prices.size();
         result.resize(len,0);
         for(int i=0;i<len;i++){
-            while(!s.empty() && s.top().first>prices[i]){
+            while(!s.empty() && s.top().first>=prices[i]){
                 pair<int,int> temp=s.top();
                 s.pop();
                 result[temp.second]=temp.first-prices[i];
