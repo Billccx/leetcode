@@ -7,7 +7,7 @@
  * }
  */
 func findDuplicateSubtrees(root *TreeNode) []*TreeNode {
-	mp := map[[3]int]int{}
+	mp := map[[3]int]int{} //{}意味创建空map,也可以使用mp:=make(map[[3]int]int)进行创建
 	var dfs func(*TreeNode) int
 	type subTree struct {
 		p   *TreeNode
