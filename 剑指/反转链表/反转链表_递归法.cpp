@@ -21,7 +21,6 @@ public:
     ListNode* reverseList(ListNode* head) {
         if(!head) return nullptr;
         ListNode* ans=solve(head);
-        
         return ans;
     }
 };
