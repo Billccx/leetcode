@@ -1,0 +1,4 @@
+两个时间段的最晚开始时间，会在两个时间段的最早结束时间之前
+startTime_i = max(event1[0], event2[0])
+endTime_j = min(event1[1], event2[1])
+通过返回startTime_i <= endTime_j得到答案
