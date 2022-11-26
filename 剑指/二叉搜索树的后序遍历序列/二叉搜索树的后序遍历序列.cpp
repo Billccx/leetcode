@@ -1,13 +1,19 @@
 class Solution {
 public:
     bool visit(vector<int>& v,int start,int end){
-        int p=end;
-        for(int i=p-1;i>=0&& postorder[i]>postorder[p];i--){
-            if(postorder[i]>postorder[p] && postorder[i-1]<postorder[p]){
-                return verifyPostorder(v,start,i-1) && verifyPostorder(v,i+1,p-1);
-            }
+        if(start>=end) return true;
+        int p=end,target=v[p];
+        int q=p-1;
+        while(q>=start){
+            if(v[q]>target) q--;
+            else break;
         }
-
+        //cout<<"pivtal:"<<q<<endl;
+        if(q<start) return visit(v,start,end-1);
+        for(int i=start;i<=q;i++){
+            if(v[i]>target) return false;
+        }
+        return visit(v,start,q) && visit(v,q+1,end-1);
     }
 
     bool verifyPostorder(vector<int>& postorder) {
