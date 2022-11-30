@@ -1,35 +1,41 @@
 class Solution {
 public:
-    set<string> ans;
+    vector<string> ans;
     string mp;
     void dfs(vector<int>&vis,string s,int len){
         if(s.length()==len){
-            ans.insert(s);
+            ans.push_back(s);
             return;
         }
-        for(int i=0;i<len;i++){
+        int i=0;
+        while(i<len){
             if(!vis[i]){
                 vis[i]=1;
                 string temp=s+mp[i];
                 dfs(vis,temp,len);
                 vis[i]=0;
+                while(i+1<len && mp[i+1]==mp[i])i++;
             }
+            i++;
         }
         return;
     }
 
     vector<string> permutation(string s) {
         vector<int> vis(8);
+        sort(s.begin(),s.end());
+        
         int len=s.length();
         mp=s;
+        cout<<mp<<endl;
         dfs(vis,"",len);
-        vector<string> ret;
-        for(auto item:ans) ret.push_back(item);
-        return ret;
+        return ans;
     }
 };
 
+
 /*
-要求生成的全排列中不能有重复的元素
-此方法使用set去重，效率较低
+a b b b c c c
+  * --> *
+当dfs for循环到b处时，下一个直接搜索c位置，防止重复
 */
