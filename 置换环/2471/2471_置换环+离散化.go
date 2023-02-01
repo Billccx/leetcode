@@ -20,8 +20,7 @@ func minimumOperations(root *TreeNode) (ans int) {
 		id := make([]int, n) // 离散化后的数组
 		for i := range id {
 			id[i] = i
-		}
-		sort.Slice(id, func(i, j int) bool { return a[id[i]] < a[id[j]] })
+		}		sort.Slice(id, func(i, j int) bool { return a[id[i]] < a[id[j]] })
 		/*
 			离散化:
 			对于一个元素互异的数组：3，7，6，8
