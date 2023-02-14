@@ -12,3 +12,7 @@ solving leetcode problems
 #### 前缀和+哈希表
 
 剑指 Offer II 010. 和为 k 的子数组 （https://leetcode.cn/problems/QTMn0o/?envType=study-plan&id=lcof-ii&plan=lcof&plan_progress=b8v9bf3）
+
+### 前缀和+单调栈
+
+1124.表现良好的最长时间段 （https://leetcode.cn/problems/longest-well-performing-interval/description/）
