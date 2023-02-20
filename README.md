@@ -16,3 +16,8 @@ solving leetcode problems
 ### 前缀和+单调栈
 
 1124.表现良好的最长时间段 （https://leetcode.cn/problems/longest-well-performing-interval/description/）
+
+
+### 滑动窗口
+
+剑指 Offer II 014. 字符串中的变位词 (https://leetcode.cn/problems/MPnaiL/description/?envType=study-plan&id=lcof-ii&plan=lcof&plan_progress=b8v9bf3)
