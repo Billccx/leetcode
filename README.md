@@ -21,3 +21,9 @@ solving leetcode problems
 ### 滑动窗口
 
 剑指 Offer II 014. 字符串中的变位词 (https://leetcode.cn/problems/MPnaiL/description/?envType=study-plan&id=lcof-ii&plan=lcof&plan_progress=b8v9bf3)
+
+## 二进制转换
+
+面试题 05.02. 二进制数转字符串（https://leetcode.cn/problems/bianry-number-to-string-lcci/description/）
+
+参考：https://jingyan.baidu.com/article/eb9f7b6dc692e9c79264e878.html
