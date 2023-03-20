@@ -27,3 +27,7 @@ solving leetcode problems
 面试题 05.02. 二进制数转字符串（https://leetcode.cn/problems/bianry-number-to-string-lcci/description/）
 
 参考：https://jingyan.baidu.com/article/eb9f7b6dc692e9c79264e878.html
+
+
+## 并查集
+261. 以图判树（https://leetcode.cn/problems/graph-valid-tree/description/）
