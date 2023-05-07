@@ -30,4 +30,10 @@ solving leetcode problems
 
 
 ### 并查集
+
 261. 以图判树（https://leetcode.cn/problems/graph-valid-tree/description/）
+
+
+### 排列组合
+
+1010. 总持续时间可被 60 整除的歌曲（https://leetcode.cn/problems/pairs-of-songs-with-total-durations-divisible-by-60/description/）
