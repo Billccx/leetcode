@@ -67,7 +67,7 @@ public:
         int maxfreq = 0;
         long long sum = 0;
         for (int i = 0; i < n; i++) {
-            sum += (long long)count[i] * i;
+            sum += (long long)count[i] * i;  //ll转换写法
             if (count[i] > maxfreq) {
                 maxfreq = count[i];
                 mode = i;
