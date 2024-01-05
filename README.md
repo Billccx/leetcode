@@ -37,3 +37,8 @@ solving leetcode problems
 ### 排列组合
 
 1010. 总持续时间可被 60 整除的歌曲（https://leetcode.cn/problems/pairs-of-songs-with-total-durations-divisible-by-60/description/）
+
+
+### 单调栈
+
+1944. 队列中可以看到的人数 （https://leetcode.cn/problems/number-of-visible-people-in-a-queue/description/）
