@@ -6,6 +6,8 @@ solving leetcode problems
 
 剑指 Offer II 008. 和大于等于 target 的最短子数组 （https://leetcode.cn/problems/2VG8Kg/?envType=study-plan&id=lcof-ii&plan=lcof&plan_progress=b8v9bf3）
 
+76. 最小覆盖子串 （https://leetcode.cn/problems/minimum-window-substring/description/?envType=study-plan-v2&envId=top-100-liked）
+
 
 ### 前缀和
 
